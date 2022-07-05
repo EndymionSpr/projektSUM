@@ -8,12 +8,12 @@ const pool = mysql.createPool({
     password: process.env.DB_PASSWORD,
 });
 
-let sql = "SELECT * FROM test;";
+/* let sql = "select user_id from Users;";
 
 pool.execute(sql, function(err, result){
     if (err) throw err;
 
     console.log(result);
-})
+}) */
 
 module.exports = pool.promise();

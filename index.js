@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
-const PORT = 5555;
+const PORT = process.env.PORT || 3333;
 
+app.use("/posts", require("./routes/postRoutes"));
 
 app.get('/users_normal',(req,res) => {
     res.status(200).send({ response: 
