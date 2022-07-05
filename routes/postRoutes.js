@@ -5,7 +5,12 @@ const router = express.Router();
 // @route GET && POST - /posts/
 router
   .route("/users_normal")
-  .get(postControllers.getAllPosts)
+  .get(postControllers.getAllUser_id);
+
+router
+  .route("/connected_classes/:id")
+  .get(postControllers.listConnectedClasses);
+
 //   .post(postControllers.createNewPost);
 
 //router.route("/:id").get(postControllers.getPostById);

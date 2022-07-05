@@ -4,7 +4,9 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3333;
 
-app.use("/posts", require("./routes/postRoutes"));
+app.use(express.json());
+
+app.use("/", require("./routes/postRoutes"));
 
 app.get('/users_normal',(req,res) => {
     res.status(200).send({ response: 

@@ -7,6 +7,12 @@ class Post {
     
         return db.execute(sql);
       }
+    
+    static findByClass(id) {
+        let sql = `SELECT connected_classes from Users where user_id= ${id};`;
+        
+        return db.execute(sql);
+    }
 
 }
 
