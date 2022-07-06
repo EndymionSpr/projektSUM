@@ -13,7 +13,6 @@ class Post {
         
         return db.execute(sql);
     }
-
 }
 
 module.exports = Post;

@@ -11,8 +11,8 @@ router
   .route("/connected_classes/:id")
   .get(postControllers.listConnectedClasses);
 
-//   .post(postControllers.createNewPost);
 
-//router.route("/:id").get(postControllers.getPostById);
+
+
 
 module.exports = router;
